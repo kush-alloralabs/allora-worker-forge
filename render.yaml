@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: allora-worker
+    env: docker
+    dockerfilePath: docker/Dockerfile
+    envVars:
+      - key: MODEL
+        value: regression_time_series
+    
+  - type: web
+    name: allora-node
+    image: alloranetwork/allora-offchain-node:v0.8.0
+    envVars:
+      - key: WORKER_URL
+        fromService:
+          name: allora-worker
+          type: web
+          property: host

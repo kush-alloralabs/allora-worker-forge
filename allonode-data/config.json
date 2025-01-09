@@ -1,0 +1,26 @@
+{
+    "wallet": {
+        "address": "allo12j0l9g8zxtae4hpg5jx4ly6r63x65jwp43vk5s",
+        "addressKeyName": "forge-wallet",
+        "addressRestoreMnemonic": "degree shoe you side trigger gadget cricket estate essay bronze silent glass ranch luggage fat basic penalty garbage crazy genre weapon memory good thank",
+        "alloraHomeDir": "",
+        "gas": "auto",
+        "gasAdjustment": 1.5,
+        "nodeRpc": "https://allora-rpc.testnet.allora.network",
+        "maxRetries": 1,
+        "retryDelay": 3,
+        "accountSequenceRetryDelay": 5,
+        "submitTx": true
+    },
+    "worker": [
+        {
+            "topicId": 15,
+            "inferenceEntrypointName": "api-worker-reputer",
+            "loopSeconds": 5,
+            "parameters": {
+                "InferenceEndpoint": "http://inference:8000/inference/{Token}",
+                "Token": "ETH"
+            }
+        }
+    ]
+}
