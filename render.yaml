@@ -2,7 +2,7 @@ services:
   - type: web
     name: allora-worker
     env: docker
-    dockerfilePath: docker/Dockerfile
+    dockerfilePath: ./docker/Dockerfile
     envVars:
       - key: MODEL
         value: regression_time_series
